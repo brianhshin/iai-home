@@ -32,6 +32,9 @@ An example of one of the searches to scrape from the Zillow search config:
     price_max: 700000
 ```
 
-The listings data comes back as a json response and they are limited by search pagination- one payload per page. I set it to iterate on each page and scraped the complete set of results. All the data gets compiled into one array, and I added some metadata fields for tracking the scraping source (zillow) and the ingestion timestamp (when the script ran). The data gets uploaded to my S3 bucket set by the search name and date (ex: `south_end_boston_ma_20250501`). I idea is to run the script once a day. I also make no transformations to the data, as I'll be doing that in dbt. I'm only concerned with getting the raw data into S3.
+-  The listings data comes back as a json response and they are limited by search pagination- one payload per page. I set it to iterate on each page and scraped the complete set of results.
+- All the data gets compiled into one array, and I added some metadata fields for tracking the scraping source (zillow) and the ingestion timestamp (when the script ran).
+- The data gets uploaded to my S3 bucket set by the search name and date (ex: `south_end_boston_ma_20250501`). The idea is to run the script once a day.
+- I also make no transformations to the data, as I'll be doing that in dbt. I'm only concerned with getting the raw data into S3.
 
 Once the data is in S3, the next step is to read it directly from a Snowflake external stage using a storage integration linked to my AWS creds. I'll be able to query the unstructured data directly in real time. If I wanted to reduce the time between updates from daily to hourly, I would only have to worry about getting it into S3 faster.
