@@ -9,7 +9,7 @@ tldr; some python to scrape zillow results and save them to a s3 bucket
 ```bash
 .
 ├── config
-│   ├── zillow_search_config.yaml
+│   └── zillow_search_config.yaml
 ├── iai_utils.py
 ├── zillow_ingest.py
 └── README.md
