@@ -105,7 +105,7 @@ Here is an example of one home from the scraped payload:
       "lotAreaValue": 952,
       "lotAreaUnit": "sqft",
       "isShowcaseListing": false
-  }
+    }
   },
   "isSaved": false,
   "isUserClaimingOwner": false,
@@ -149,9 +149,9 @@ Here is an example of one home from the scraped payload:
       {"photoKey": "da8fc2582b36503254edd56e35bb9e33"},
       {"photoKey": "c7e41f4a13a0ec4ea108c263933d7653"},
       {"photoKey": "7939cf6fe63a35ebd4b9901e55b6dfb2"}
-  ],
-  "communityPhotoData": null,
-  "isStaticUrls": false
+    ],
+    "communityPhotoData": null,
+    "isStaticUrls": false
   },
   "isPaidBuilderNewConstruction": false
 }
